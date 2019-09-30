@@ -1,0 +1,97 @@
+
+{{!-- <div>
+    <h2>Welcome {{this.profile.name}}</h2>
+    <br/>
+    <a href="/pokemons" class="btn btn-default btn-lg btn-square">Find a Pokemon</a>
+    <br/>
+    <p>Here is some information about your result:</p>
+    <ul>
+        <li>Pokemon ID: {{this._id}}</li>
+        <li>Name: {{this.name}}</li>
+        <li>Type: {{this.type}}</li>
+        <li>Max_atk: {{this.max_atk}}</li>
+        <li>Max_def: {{this.max_def}}</li>
+        <li>Max_hp: {{this.max_hp}}</li>
+        <li>Max_cp: {{this.max_cp}}</li>
+        <li>Comments: {{this.comments}}</li>
+    </ul>
+    
+    <a href=logout action="/logout">Logout</a>
+
+
+
+</div>
+{{#if error}}
+<p>{{error}}</p>
+{{/if}} --}}
+{{!-- <div>
+    <h1>pokemons</h1>
+    <div id = "pokemons">
+        {{#each pokemon}}
+
+        <h2><a href="/pokemons/{{../pokemons/}}">{{balbusaur}}</a></h2>
+        <div>{{type}}</div>
+        {{/each}}
+    </div>
+</div> --}}
+
+<div>
+     <h2>PokeMon Database</h2>
+    <br/>
+        <a href="/user_profile" class="btn btn-default btn-lg btn-square">Profile</a>
+    <br/>
+    
+    <!-- filter 
+<input type="text" name="search" placeholder="search pokemon by its name..">
+    <button type="search">search</button> 
+    <form id= "filter-form" method = "post">
+        <div class = "form-group">
+            <label for="string"> Please provide pokemon name to search: </label>
+                <input type="text" class="aa" name="search" placeholder="name" value="{{string}}">
+        </div>
+         <div class="form-group hidden" id="error-container">
+
+       <div class="alert alert-danger text-goes-here"></div>
+    </div>
+
+    <div class="form-group">
+        <button type="search">search</button>
+    </div>
+
+      <div class="form-group hidden" id="result-container">
+        <div class="alert alert-success text-goes-here">
+        </div>
+      </div>
+    </form> -->
+ 
+   
+
+    <br>
+    <br>
+    {{#each pokemons}}
+    <!-- <p>{{@index}}.{{this}}</p> -->
+    <ul>
+        <li>Pokemon ID: {{this._id}}</li>
+        <li>Name: {{this.name}}</li>
+        <li>Type: {{this.type}}</li>
+        <li>Comments: {{this.comments}}</li>
+        <!-- add to team button -->
+        <br> 
+        <form action="http://localhost:3000/user_profile/" method="post" >
+            <button type="submit" value="{{this.name}}">Add To My Team</button>
+        </form>
+
+
+    </ul>
+    {{/each}}
+
+    <form action="http://localhost:3000/pokemons/" method="post" >
+        <input type="text" class = "aa" name="search" placeholder="search pokemon by its name..">
+            <button type="submit" value="{{this.name}}">search</button>
+        </form>
+
+        <br>
+        <br>
+
+
+</div>

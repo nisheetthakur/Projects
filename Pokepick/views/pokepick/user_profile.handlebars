@@ -1,0 +1,24 @@
+<div>
+    <h2>Welcome {{this.profile.name}}</h2>
+    <br/>
+    <a href="/pokemons" class="btn btn-default btn-lg btn-square">Find a Pokemon</a>
+    <br/>
+    <p>Here is some information about yourself:</p>
+    <ul>
+        <li>User ID: {{this._id}}</li>
+        <li>Name: {{this.profile.name}}</li>
+        <li>email: {{this.email}}</li>
+        <li>Hobby: {{this.profile.hobby}}</li>
+        <li>Gender: {{this.profile.gender}}</li>
+        <li>team {{this.team}}</li>
+    </ul>
+    
+    <a href=logout action="/logout">Logout</a>
+    <h2>My Team</h2>
+        <p>{{this.team}}</p>
+
+
+</div>
+{{#if error}}
+<p>{{error}}</p>
+{{/if}}

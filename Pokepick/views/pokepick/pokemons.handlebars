@@ -1,0 +1,57 @@
+{{!-- <div>
+    <h2>PokeMon Database</h2>
+    <br/>
+        <a href="/pokemons" class="btn btn-default btn-lg btn-square">Find a Pokemon</a>
+    <br/>
+    <p>Please search pokemon by name or type:</p>
+
+    <input type="text" name="search" placeholder="Search by type or name..">
+
+  
+     <br>
+     <br>
+    
+    <a href=logout action="/logout">Logout</a>
+
+ --}}
+
+ <div>
+     <h2>PokeMon Database</h2>
+     <p>below is your searched pokemon</p>
+ </div>
+
+ <div class="openpokemon">
+    <label>The id of the pokemon:</label>
+    <div class="wrap-input100">
+    <textarea class="input100" readonly>{{pokemons._id}}</textarea></div>
+    <label>Pokemon name: </label>
+    <div class="wrap-input100">
+    <textarea class="input101" readonly>{{pokemons.name}}</textarea></div>
+    <label>Pokemon type:</label>
+    <div class="wrap-input100">
+    <textarea class="input100" readonly>{{pokemons.type}}</textarea></div>
+    <label>The max_atk of the pokemon:</label>
+    <div class="wrap-input100">
+    <textarea class="input100" readonly>{{pokemons.max_atk}}</textarea></div>
+    <label>The max_def of the pokemon:</label>
+    <div class="wrap-input100">
+    <textarea class="input100" readonly>{{pokemons.max_def}}</textarea></div>
+    <label>The max_hp of the pokemon:</label>
+    <div class="wrap-input100">
+    <textarea class="input100" readonly>{{pokemons.max_hp}}</textarea></div>
+    <label>The max_cp of the pokemon:</label>
+    <div class="wrap-input100">
+    <textarea class="input100" readonly>{{pokemons.max_cp}}</textarea></div>
+    <label>The comment of the pokemon:</label>
+    <div class="wrap-input100">
+    <textarea class="input100" readonly>{{pokemons.comments}}</textarea></div>
+    <a href=logout action="/logout">Logout</a>
+
+    <a href="/pokemons" class="btn btn-default btn-lg btn-square">search</a>
+    <br>
+   
+    <a href="/user_profile" class="btn btn-default btn-lg btn-square">profile</a>
+
+    <br>
+
+</div>

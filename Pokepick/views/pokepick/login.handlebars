@@ -1,0 +1,30 @@
+<form id="login-form" method="post" action="/login">
+
+<div class="col-md-3">
+
+</div>
+
+<li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
+
+
+
+    <h2>Login.</h2>
+    <label for="username">Username</label><br/>
+    <input type="text" name="username" id="username"><br/>
+    <label for="password">Password</label><br/>
+    <input type="password" name="password" id="password"><br/>
+    <br>
+    <button type="submit">Submit</button>
+
+</form>
+    
+     <!--  <a href="/home">Go to Home Page</a> -->
+
+     <div class="col-md-5">
+                    <img width="45%" height="75%" src="/public/img/pika.png"/>
+                </div>
+
+
+    {{#if error}}
+    <p>{{error}}</p>
+    {{/if}}
